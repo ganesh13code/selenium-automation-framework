@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+═══════════════════════════════════════════════════════════
+CONCEPT: Log4j2 Configuration
+═══════════════════════════════════════════════════════════
+This file controls WHERE logs go (Console, File) and HOW they
+look (pattern), and at WHAT level (INFO, DEBUG, WARN, ERROR).
+
+Log levels (lowest → highest severity):
+  TRACE < DEBUG < INFO < WARN < ERROR < FATAL
+
+Setting level="info" on the root logger means:
+  - INFO, WARN, ERROR, FATAL logs are shown
+  - DEBUG and TRACE logs are SUPPRESSED
+
+To see verbose WaitUtils debug logs while troubleshooting,
+temporarily change level="info" to level="debug" below.
+
+Appenders defined here:
+  Console → prints to terminal in real time
+  File    → writes to test-output/logs/automation.log
+            (persists across runs — useful for CI debugging)
+═══════════════════════════════════════════════════════════
+-->
+<Configuration status="WARN">
+
+    <Appenders>
+
+        <!-- Console Appender: shown in terminal / IDE run window -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %c{1} - %msg%n"/>
+        </Console>
+
+        <!-- File Appender: persists logs for CI artifact review -->
+        <File name="FileLogger" fileName="test-output/logs/automation.log" append="false">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %c{1} - %msg%n"/>
+        </File>
+
+    </Appenders>
+
+    <Loggers>
+        <!-- Root logger: applies to all classes (com.framework.*) -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+
+</Configuration>

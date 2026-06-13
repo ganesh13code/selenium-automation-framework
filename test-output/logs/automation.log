@@ -1,0 +1,69 @@
+2026-06-13 13:53:46 [main] INFO  BaseTest - ╔══════════════════════════════════╗
+2026-06-13 13:53:46 [main] INFO  BaseTest - ║     TEST SUITE STARTING          ║
+2026-06-13 13:53:46 [main] INFO  BaseTest - ╚══════════════════════════════════╝
+2026-06-13 13:53:46 [main] INFO  ConfigReader - config.properties loaded from: src/test/resources/config.properties
+2026-06-13 13:53:47 [main] INFO  ExtentReportManager - ExtentReports initialized → test-output/reports\HybridFrameworkReport_2026-06-13_13-53-46.html
+2026-06-13 13:53:47 [TestNG-test-Smoke Tests-1] INFO  BaseTest - ┌─ Starting: testValidLogin
+2026-06-13 13:53:49 [TestNG-test-Smoke Tests-1] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:53:52 [TestNG-test-Smoke Tests-1] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:53:52 [TestNG-test-Smoke Tests-1] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:04 [TestNG-test-Smoke Tests-1] INFO  BaseTest - └─ PASSED: testValidLogin
+2026-06-13 13:54:04 [TestNG-test-Smoke Tests-1] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:04 [TestNG-test-Regression Tests-1] INFO  BaseTest - ┌─ Starting: testValidLogin
+2026-06-13 13:54:04 [TestNG-test-Regression Tests-3] INFO  BaseTest - ┌─ Starting: testLoginWithEmptyUsername
+2026-06-13 13:54:04 [TestNG-test-Regression Tests-2] INFO  BaseTest - ┌─ Starting: testInvalidLogin
+2026-06-13 13:54:07 [TestNG-test-Regression Tests-3] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:07 [TestNG-test-Regression Tests-1] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:07 [TestNG-test-Regression Tests-2] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:10 [TestNG-test-Regression Tests-3] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:10 [TestNG-test-Regression Tests-3] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:10 [TestNG-test-Regression Tests-1] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:10 [TestNG-test-Regression Tests-1] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:10 [TestNG-test-Regression Tests-2] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:10 [TestNG-test-Regression Tests-2] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:11 [TestNG-test-Regression Tests-3] INFO  BaseTest - └─ PASSED: testLoginWithEmptyUsername
+2026-06-13 13:54:11 [TestNG-test-Regression Tests-3] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:11 [TestNG-test-Regression Tests-3] INFO  BaseTest - ┌─ Starting: testLoginWithEmptyPassword
+2026-06-13 13:54:12 [TestNG-test-Regression Tests-2] INFO  BaseTest - └─ PASSED: testInvalidLogin
+2026-06-13 13:54:12 [TestNG-test-Regression Tests-2] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:12 [TestNG-test-Regression Tests-2] INFO  BaseTest - ┌─ Starting: testLoginPageTitle
+2026-06-13 13:54:13 [TestNG-test-Regression Tests-3] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:13 [TestNG-test-Regression Tests-2] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:16 [TestNG-test-Regression Tests-2] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:16 [TestNG-test-Regression Tests-2] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:16 [TestNG-test-Regression Tests-2] INFO  BaseTest - └─ PASSED: testLoginPageTitle
+2026-06-13 13:54:17 [TestNG-test-Regression Tests-2] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:17 [TestNG-test-Regression Tests-2] INFO  BaseTest - ┌─ Starting: testInvalidCredentialCombinations
+2026-06-13 13:54:18 [TestNG-test-Regression Tests-2] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:22 [TestNG-test-Regression Tests-1] INFO  BaseTest - └─ PASSED: testValidLogin
+2026-06-13 13:54:22 [TestNG-test-Regression Tests-3] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:22 [TestNG-test-Regression Tests-3] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:22 [TestNG-test-Regression Tests-1] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:23 [TestNG-test-Regression Tests-3] INFO  BaseTest - └─ PASSED: testLoginWithEmptyPassword
+2026-06-13 13:54:23 [TestNG-test-Regression Tests-3] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:23 [TestNG-test-Regression Tests-2] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:23 [TestNG-test-Regression Tests-2] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:25 [TestNG-test-Regression Tests-2] INFO  BaseTest - └─ PASSED: testInvalidCredentialCombinations
+2026-06-13 13:54:25 [TestNG-test-Regression Tests-2] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:25 [TestNG-test-Regression Tests-2] INFO  BaseTest - ┌─ Starting: testInvalidCredentialCombinations
+2026-06-13 13:54:26 [TestNG-test-Regression Tests-2] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:29 [TestNG-test-Regression Tests-2] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:29 [TestNG-test-Regression Tests-2] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:30 [TestNG-test-Regression Tests-2] INFO  BaseTest - └─ PASSED: testInvalidCredentialCombinations
+2026-06-13 13:54:30 [TestNG-test-Regression Tests-2] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:30 [TestNG-test-Regression Tests-2] INFO  BaseTest - ┌─ Starting: testInvalidCredentialCombinations
+2026-06-13 13:54:32 [TestNG-test-Regression Tests-2] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:35 [TestNG-test-Regression Tests-2] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:35 [TestNG-test-Regression Tests-2] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:36 [TestNG-test-Regression Tests-2] INFO  BaseTest - └─ PASSED: testInvalidCredentialCombinations
+2026-06-13 13:54:36 [TestNG-test-Regression Tests-2] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:36 [TestNG-test-Regression Tests-2] INFO  BaseTest - ┌─ Starting: testInvalidCredentialCombinations
+2026-06-13 13:54:37 [TestNG-test-Regression Tests-2] INFO  DriverManager - Chrome launched [headless=false]
+2026-06-13 13:54:41 [TestNG-test-Regression Tests-2] INFO  BaseTest -   Navigated to: https://the-internet.herokuapp.com/login
+2026-06-13 13:54:41 [TestNG-test-Regression Tests-2] INFO  BasePage - LoginPage initialized
+2026-06-13 13:54:42 [TestNG-test-Regression Tests-2] INFO  BaseTest - └─ PASSED: testInvalidCredentialCombinations
+2026-06-13 13:54:42 [TestNG-test-Regression Tests-2] INFO  DriverManager - Browser closed. ThreadLocal WebDriver removed.
+2026-06-13 13:54:43 [main] INFO  ExtentReportManager - ExtentReports flushed — report saved to disk
+2026-06-13 13:54:43 [main] INFO  BaseTest - ╔══════════════════════════════════╗
+2026-06-13 13:54:43 [main] INFO  BaseTest - ║     TEST SUITE FINISHED          ║
+2026-06-13 13:54:43 [main] INFO  BaseTest - ╚══════════════════════════════════╝

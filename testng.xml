@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+═══════════════════════════════════════════════════════════
+CONCEPT: testng.xml — The Suite Configuration File
+═══════════════════════════════════════════════════════════
+This file is the entry point Maven Surefire uses (see pom.xml
+<suiteXmlFiles>). It controls WHICH tests run, in WHAT order,
+and WHETHER they run in parallel.
+
+KEY ATTRIBUTES:
+
+  parallel="methods"
+    Each @Test METHOD runs on its own thread.
+    Other options:
+      "classes"  → each test CLASS runs on its own thread
+      "tests"    → each <test> tag below runs on its own thread
+      "none"     → sequential execution (default)
+
+  thread-count="3"
+    Max number of threads running simultaneously.
+    This is WHY DriverManager needs ThreadLocal — with
+    thread-count=3, up to 3 browsers are open at once,
+    each must be isolated.
+
+  <groups><run><include name="smoke"/></run></groups>
+    Runs ONLY tests tagged with @Test(groups={"smoke"}).
+    Comment this block out to run everything in <classes>.
+
+  Multiple <test> tags = multiple independent test runs,
+  each can have its own parallel settings, groups, and classes.
+═══════════════════════════════════════════════════════════
+-->
+
+<suite name="Hybrid Framework Suite" parallel="methods" thread-count="3" verbose="1">
+
+    <!--
+        ───────────────────────────────────────────────
+        SMOKE SUITE
+        Quick sanity check — run on every commit / PR.
+        Only includes tests tagged with groups={"smoke"}.
+        Command: mvn test -Dsurefire.suiteXmlFiles=testng.xml -Dgroups=smoke
+        ───────────────────────────────────────────────
+    -->
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.framework.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <!--
+        ───────────────────────────────────────────────
+        REGRESSION SUITE
+        Full test coverage — run nightly or before release.
+        Includes ALL tests in LoginTest (smoke + regression groups).
+        ───────────────────────────────────────────────
+    -->
+    <test name="Regression Tests">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.framework.tests.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
